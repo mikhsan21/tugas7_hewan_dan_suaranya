@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tugas 7 Hewan & Suaranya | Muhammad Ikhsan Nugraha</title>
+    <script src="js/jquery.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <style>
+      .flex-container {
+	      display: flex;
+	      background-color: #FFD700;
+	      text-align: center;
+	      align-items: center;
+	      font-weight: bold;
+	    }
+	    .flex-container > div {
+	      background-color: #078930;
+	      margin: 10px;
+	      padding: 20px;
+	      font-size: 30px;
+	      width: 150px;
+	      height: 100;
+	      border: 2px solid #FFFFFF;
+	    }
+    </style>
+  </head>
+  <body>
+    <br>
+    <h3 align="center">Hewan & Suaranya</h3>
+    <div class="container">
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  <b>Hewan Ternak</b>
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <div class="flex-container">
+                        <div class="bebek">Bebek</div>
+                        <div class="kambing">Kambing</div>
+                        <div class="sapi">Sapi</div>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  <b>Hewan Peliharaan</b>
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <div class="flex-container">
+                    <div class="kucing">Kucing</div>
+                    <div class="anjing">Anjing</div>
+                    <div class="burung">Burung Pipit</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  <b>Hewan Buas</b>
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <div class="flex-container">
+                    <div class="brg_hantu">Burung Hantu</div>
+                    <div class="badak">Badak</div>
+                    <div class="ular">Ular Kobra</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="js/jquery.js"></script>
+    <script>
+      //Bebek
+      $("document").ready(function () {
+        $("div.bebek").click(function () {
+          $(this).css({
+            "width":"200px",
+            "height":"200px",
+            "background": "url('images/bebek.jpg')",
+            "background-size": "contain",
+            "background-position": "center",
+          })
+          $("<audio></audio>").attr({
+            'src': 'audio/suara-bebek.mp3',
+            'volume': 0.4,
+            'autoplay': 'autoplay'
+          }).appendTo("div");
+        });
+        //Kambing
+        $("div.kambing").click(function (){
+          $(this).css({
+            "width":"200px",
+            "height":"200px",
+            "background": "url('images/kambing.jpg')",
+            "background-size": "contain",
+            "background-position": "center",
+          })
+          $("<audio></audio>").attr({
+            'src': 'audio/suara-kambing.mp3',
+            'volume': 0.4,
+            'autoplay': 'autoplay'
+          }).appendTo("div");
+        });
+        //Sapi
+        $("div.sapi").click(function (){
+          $(this).css({
+            "width":"200px",
+            "height":"200px",
+            "background": "url('images/sapi.jpg')",
+            "background-size": "contain",
+            "background-position": "center",
+          });
+          $("<audio></audio>").attr({
+            'src': 'audio/suara-sapi.mp3',
+            'volume': 0.4,
+            'autoplay': 'autoplay'
+          }).appendTo("div");
+        });
+        //Kucing
+          $("div.kucing").click(function (){
+            $(this).css({
+              "width":"200px",
+              "height":"200px",
+              "background": "url('images/kucing.jpg')",
+              "background-size": "contain",
+              "background-position": "center",
+            });
+            $("<audio></audio>").attr({
+              'src': 'audio/suara-kucing.mp3',
+              'volume': 0.4,
+              'autoplay': 'autoplay'
+            }).appendTo("div");
+          });
+          //Anjing
+          $("div.anjing").click(function (){
+            $(this).css({
+              "width":"200px",
+              "height":"200px",
+              "background": "url('images/anjing.jpg')",
+              "background-size": "contain",
+              "background-position": "center",
+            });
+            $("<audio></audio>").attr({
+              'src': 'audio/suara-anjing.mp3',
+              'volume': 0.4,
+              'autoplay': 'autoplay'
+            }).appendTo("div");
+          });
+          //Burung Pipit
+          $("div.burung").click(function (){
+            $(this).css({
+              "width":"200px",
+              "height":"200px",
+              "background": "url('images/burung-pipit.jpg')",
+              "background-size": "contain",
+              "background-position": "center",
+            });
+            $("<audio></audio>").attr({
+              'src': 'audio/suara-burung-pipit.mp3',
+              'volume': 0.4,
+              'autoplay': 'autoplay'
+            }).appendTo("div");
+          });
+          //Burung Hantu
+          $("div.brg_hantu").click(function (){
+            $(this).css({
+              "width":"200px",
+              "height":"200px",
+              "background": "url('images/burung-hantu.jpg')",
+              "background-size": "contain",
+              "background-position": "center",
+            });
+            $("<audio></audio>").attr({
+              'src': 'audio/suara-burung-hantu.mp3',
+              'volume': 0.4,
+              'autoplay': 'autoplay'
+            }).appendTo("div");
+        });
+          //Badak
+          $("div.badak").click(function (){
+            $(this).css({
+              "width":"200px",
+              "height":"200px",
+              "background": "url('images/badak.jpg')",
+              "background-size": "contain",
+              "background-position": "center",
+            });
+            $("<audio></audio>").attr({
+              'src': 'audio/suara-badak.mp3',
+              'volume': 0.4,
+              'autoplay': 'autoplay'
+            }).appendTo("div");
+          });
+          //Ular Kobra
+          $("div.ular").click(function (){
+            $(this).css({
+              "width":"200px",
+              "height":"200px",
+              "background": "url('images/ular-kobra.jpeg')",
+              "background-size": "contain",
+              "background-position": "center",
+            });
+            $("<audio></audio>").attr({
+              'src': 'audio/suara-kobra.mp3',
+              'volume': 0.4,
+              'autoplay': 'autoplay'
+            }).appendTo("div");
+          });
+        });
+    </script>
+  </body>
+</html>
